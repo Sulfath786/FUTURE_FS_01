@@ -86,3 +86,16 @@ p, li {
   transform: translateY(-8px);
   transition: 0.3s ease;
 }
+/* ===== ABOUT SECTION ===== */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about p {
+  max-width: 900px;
+  margin: 12px auto;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
