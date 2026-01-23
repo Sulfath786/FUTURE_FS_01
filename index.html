@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Full-Stack Developer Portfolio</title>
+  <title>Full-Stack Developer Portfolio</title>
   <meta name="description" content="Sulfath — aspiring full-stack developer and frontend enthusiast. Projects, skills, and contact." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
@@ -18,13 +18,14 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#hero">Personal Portfolio</a>
+      <a class="brand" href="index.html">Personal Portfolio</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
       <ul id="nav-menu" class="nav-menu">
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -36,133 +37,66 @@
         <h1 class="fade-in">Hi, I'm Sulfath 👋</h1>
         <p class="fade-in delay">Aspiring Full-Stack Developer — Frontend Enthusiast</p>
         <div class="hero-buttons fade-in delay2">
-          <a href="#projects" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn outline">Contact Me</a>
+          <a href="project.html" class="btn primary">View Projects</a>
+          <a href="contact.html" class="btn outline">Contact Me</a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>
-      I am an aspiring Full-Stack Developer with a strong focus on building modern, responsive, and user-friendly web applications. 
-      My journey began with frontend technologies like HTML, CSS, and JavaScript, and I am now expanding into backend development to become a well-rounded engineer.
-    </p>
-    <p>
-      I enjoy turning ideas into functional products, paying attention to clean design, accessibility, and performance. 
-      I am comfortable working with Git/GitHub for version control and deploying projects on platforms like Netlify.
-    </p>
-    <p>
-      My goal is to gain hands-on experience through internships and collaborative projects, while continuously improving my skills and contributing to meaningful solutions.
-    </p>
-  </div>
-</section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-      <!-- Frontend -->
-      <div class="skill-category">
-        <h3>Frontend</h3>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3 (Responsive Design, Flexbox, Grid)</li>
-          <li>JavaScript (ES6+)</li>
-        </ul>
-      </div>
-
-      <!-- Backend -->
-      <div class="skill-category">
-        <h3>Backend</h3>
-        <ul>
-          <li>Node.js (Basics)</li>
-          <li>Express.js (Learning)</li>
-        </ul>
-      </div>
-
-      <!-- Tools & Deployment -->
-      <div class="skill-category">
-        <h3>Tools & Deployment</h3>
-        <ul>
-          <li>Git & GitHub (Version Control)</li>
-          <li>Netlify (Deployment)</li>
-          <li>VS Code</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
       <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-container">
-          <article class="project-card">
-  <h3>Personal Portfolio Website</h3>
-  <p>
-    A responsive and professional portfolio showcasing my skills, projects, and contact information.
-    Designed with clean UI/UX principles and optimized for recruiters and clients.
-  </p>
-  <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-  <div class="project-links">
-    <a href="https://github.com/Sulfath786/FUTURE_FS_01" target="_blank" rel="noreferrer">GitHub</a>
-    <a href="PASTE_YOUR_NETLIFY_LINK_HERE" target="_blank" rel="noreferrer">Live Demo</a>
-  </div>
-</article>
-
-         <article class="project-card">
-  <h3>Client Lead Management System</h3>
-  <p>
-    A mini CRM application to manage client leads, track follow‑ups, and organize customer information.
-    Built to demonstrate backend integration and practical business workflows.
-  </p>
-  <p><strong>Tech Used:</strong> HTML, CSS, JavaScript, Node.js</p>
-  <div class="project-links">
-    <span class="coming-soon">Coming Soon</span>
-  </div>
-</article>
-</div>
+        <h2>About Me</h2>
+        <p>
+          I am an aspiring Full-Stack Developer with a strong focus on building modern, responsive, and user-friendly web applications.
+        </p>
+        <p>
+          My journey began with frontend technologies like HTML, CSS, and JavaScript, and I am now expanding into backend development to become a well-rounded engineer.
+        </p>
+        <p>
+          I enjoy turning ideas into functional products, paying attention to clean design, accessibility, and performance.
+        </p>
+        <p>
+          My goal is to gain hands-on experience through internships and collaborative projects, while continuously improving my skills and contributing to meaningful solutions.
+        </p>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
+    <!-- SKILLS -->
+    <section id="skills" class="section">
       <div class="container">
-        <h2>Contact Me</h2>
-
-        <!-- Netlify hidden form for fallback -->
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
-
-        <form id="contact-form" class="contact-form" novalidate>
-          <label for="name">Your Name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required />
-
-          <label for="email">Your Email</label>
-          <input id="email" name="email" type="email" placeholder="your@email.com" required />
-
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
-
-          <button type="submit" class="btn primary">Send Message</button>
-          <p id="form-status" class="form-status" aria-live="polite"></p>
-        </form>
-
-        <div class="contact-links">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3 (Responsive Design, Flexbox, Grid)</li>
+              <li>JavaScript (ES6+)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js (Basics)</li>
+              <li>Express.js (Learning)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Deployment</h3>
+            <ul>
+              <li>Git & GitHub (Version Control)</li>
+              <li>Netlify (Deployment)</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       <div class="contact-links">
           <p>Email: <a href="sulfathsulfath31@gmail.com" target="_blank" rel="noreferrer">yourmail@gmail.com</a></p>
           <p>GitHub: <a href="https://github.com/Sulfath786" target="_blank" rel="noreferrer">github.com/Sulfath786</a></p>
           <p>LinkedIn: <a href="https://www.linkedin.com/in/sulfath-p-c-835056376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer">LinkedIn Profile</a></p>
         </div>
-      </div>
     </section>
   </main>
 
