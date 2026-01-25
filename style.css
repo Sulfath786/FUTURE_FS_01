@@ -43,9 +43,9 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 .site-header {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: saturate(180%) blur(8px);
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.95);
   border-bottom: 1px solid rgba(148,163,184,.2);
-  padding: 6px 0; /* slimmer header */
+  padding: 10px 0; /* slimmer header */
 }
 
 .nav {
@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 }
 
 .nav-menu {
-  display: flex; gap: 16px;
+  display: flex; gap: 20px;
   list-style: none; margin: 0; padding: 0;
 }
 
@@ -66,20 +66,45 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   color: var(--accent);
   font-weight: 600;
   font-size: 15px;
-  padding: 4px 8px;
+  padding: 6px 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--white);
+  border-bottom: 2px solid var(--accent); /* underline effect */
 }
 
 .nav-toggle { display: none; }
+.nav-menu a.active {
+  color: var(--white);
+  border-bottom: 2px solid var(--accent);
+}
 
 @media (max-width: 768px) {
   .nav-toggle {
     display: inline-block;
-    background: var(--card); color: var(--text);
+    background: var(--card);
+    color: var(--text);
     border: 1px solid rgba(148,163,184,.3);
-    border-radius: 8px; padding: 8px 12px;
+    border-radius: 8px;
+    padding: 8px 12px;
   }
-  .nav-menu { display: none; flex-direction: column; gap: 8px; margin-top: 12px; }
-  .nav-menu.open { display: flex; }
+
+  .nav-menu {
+    max-height: 0;              /* collapsed */
+    overflow: hidden;           /* hide content */
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;          /* enough space for links */
+    opacity: 1;
+  }
 }
 
 /* =========================
@@ -146,7 +171,7 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 /* Projects */
 .projects-container {
   display: grid; gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 24px;
 }
 .project-card {
@@ -155,7 +180,8 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform .2s ease;
 }
-.project-card:hover { transform: translateY(-6px); }
+.project-card:hover { transform: translateY(-6px);box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 .project-card h3 { margin: 0 0 8px; color: var(--blue); }
 .project-card p { font-size: 14px; color: #4b5563; }
 .project-links { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -163,10 +189,28 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   background: var(--blue); color: var(--white);
   padding: 8px 14px; border-radius: 6px; font-size: 14px;
 }
-.project-links a:hover { background: var(--blue-dark); }
-.coming-soon { color: #9ca3af; font-style: italic; }
+.tech-tags {
+  margin: 12px 0;
+}
 
-/* Contact */
+.tag {
+  background: var(--card);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.status-badge {
+  display: inline-block;
+  background: #fbbf24;
+  color: #1f2937;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.coming-soon { color: #fff; background: #9ca3af;
 .contact-form {
   display: grid; gap: 12px;
   max-width: 640px; margin: 0 auto;
@@ -187,6 +231,24 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   margin-top: 20px;
 }
 .contact-links p { margin: 0; }
+/* Contact Links Styling */
+.contact-links a {
+  color: var(--accent);        /* use your accent color */
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;               /* align icon + text neatly */
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--white);         /* hover color */
+}
+
+.contact-links i {
+  margin-right: 8px;           /* space between icon and text */
+  font-size: 18px;             /* slightly larger icon */
+}
 
 /* Footer */
 .site-footer {
