@@ -130,7 +130,7 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   }
 
   .nav-toggle {
-    display: none;
+    display: none !important;
     margin-left: auto; /* pushes it to the right */
   }
 }
