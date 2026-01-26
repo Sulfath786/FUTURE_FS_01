@@ -96,6 +96,7 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 
 @media (max-width: 768px) {
   .nav-toggle {
+    dispaly: inline-block;
     margin-left: auto;
     background: var(--card);
     color: var(--text);
