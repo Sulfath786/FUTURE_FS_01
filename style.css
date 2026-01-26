@@ -88,7 +88,6 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   border-bottom: 2px solid var(--accent); /* underline effect */
 }
 
-.nav-toggle { display: none; }
 .nav-menu a.active {
   color: var(--white);
   border-bottom: 2px solid var(--accent);
@@ -126,6 +125,7 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     flex-direction: row;
     gap: 24px;
     background: none;
+    opacity: 1;
     padding: 0;
   }
 
@@ -133,6 +133,17 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     display: none;
     margin-left: auto; /* pushes it to the right */
   }
+}
+
+/* Hamburger button */
+.nav-toggle {
+  margin-left: auto; /* pushes button to the right */
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(148,163,184,.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 /* Hamburger icon */
