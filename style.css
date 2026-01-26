@@ -52,6 +52,19 @@ img { max-width: 100%; display: block; border-radius: 8px; }
   display: flex; align-items: center; justify-content: space-between;
   max-width: 1080px; margin: 0 auto; padding: 0 20px;
 }
+/* Hide menu on small screens */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  background: #111;
+  padding: 16px;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+  display: flex;
+}
 
 .brand {
   font-weight: 600; font-size: 18px; color: var(--text);
@@ -106,7 +119,46 @@ img { max-width: 100%; display: block; border-radius: 8px; }
     opacity: 1;
   }
 }
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 24px;
+    background: none;
+    padding: 0;
+  }
 
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
 /* =========================
    Buttons
 ========================= */
