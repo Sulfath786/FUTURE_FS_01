@@ -3,11 +3,11 @@
   --bg: #f5f5f5;
   --text: #1a1a1a;
   --muted: #666666;
-  --accent: #0077ff;
+  --accent: #334155;
   --card:  #ffffff;
   --white: #ffffff;
-  --blue: #0077ff;
-  --blue-dark: #005ecc;
+  --blue: #0f766e;
+  --blue-dark: #0c4a6e;
 }
 
 * { box-sizing: border-box; }
