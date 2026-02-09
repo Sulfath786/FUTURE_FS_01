@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navigation -->
+ 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">Personal Portfolio</a>
@@ -26,7 +26,7 @@
       </ul>
     </nav>
   </header>
-<!-- Script to highlight active nav link -->
+
 <script>
   const currentPage = window.location.pathname.split("/").pop(); 
   const navLinks = document.querySelectorAll(".nav-menu a");
@@ -38,7 +38,6 @@
   });
 </script>
 
-  <!-- Page Content -->
   <section id="resume" class="section">
     <div class="container resume-card">
       <h2>Resume</h2>
@@ -60,7 +59,7 @@
   navToggle.addEventListener('click', () => {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !expanded);
-    navMenu.classList.toggle('open'); // match your CSS
+    navMenu.classList.toggle('open'); 
   });
 </script>
 <script src="script.js"></script>
