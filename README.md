@@ -6,7 +6,7 @@ Hi, I'm Sulfath — an aspiring full‑stack developer who loves building clean,
 
  Live Demo: 
 
-Visit Portfolio - (https://rad-seahorse-64be21.netlify.app)
+Visit Portfolio - https://sulfath786.github.io/FUTURE_FS_01/
 
 Tech Stack:
 
